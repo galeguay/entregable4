@@ -1,0 +1,246 @@
+/* ---------- 4 EN LINEA --------- */
+:root{
+    --mouse-x: 0px;
+    --mouse-y: 0px;
+    --primario: #096098;
+    --primarioSombra1: #064873;
+    --primarioSombra2: #033250;
+    --primarioSombra3: #001828;
+    --primarioLuz1: #1F7BB6;
+    --primarioLuz2: #6DB6E6;
+    --acento: #FFBC2C;
+    --acentoSombra1: #FFAE00;
+    --acentoSombra2: #C18400;
+    --acentoSombra3: #674700;
+    --acentoLuz1: #FFC341;
+    --acentoLuz2: #FFD986;
+    --colorJugador1: #000080;
+    --colorJugador2: #ff0000;
+}
+.game{
+    margin: 50px;
+    display: flex;
+    align-items: center;
+}
+#ficha{
+    position: relative;
+    /* left: var(--mouse-x);
+    top: var(--mouse-y); */
+    transform: translate(var(--mouse-x), var(--mouse-y));
+    transition: 2s;
+}
+#tablero{
+    /* z-index: 1; */
+    position: absolute;
+    left: 280px;
+    top: 200px;
+    width: 400px;
+    height: 300px;
+}
+#gameDiv{
+    width: 890px;
+    height: 590px;
+}
+.ficha, .dropPoint{
+    width: 50px;
+    height: 50px;
+}
+
+
+.canvas-container{
+    width: 890px;
+    height: 590px;
+    position: relative;
+}
+#titulo{
+    display: block;
+    position: absolute;
+    left: 256px;
+    top: 30px;
+    text-shadow: 5px 5px 5px black ;
+    text-shadow: rgb(0, 17, 255) 5px 0 15px;
+}
+#gameCanvas {
+    position: absolute;
+    background-image: url("../images/4enLinea/tableroCompleto.webp");
+}
+
+#button4, #button5, #button6, #button7, #buttonReiniciar, #buttonMenuPrincipal {
+    left: 374px;
+    color: black;
+    display: block;
+    position:absolute;
+    padding: 0px;
+    width: 150px;
+    height: 54px;
+    border-radius: 17px;
+    margin-bottom: 20px;
+    border-color: var(--primario);
+    box-shadow: 0 0 40px 40px var(--primario) inset, 0 0 0 0 var(--primario);
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+#button4{
+    top: 340px;
+}
+#button5{
+    top: 400px;
+}
+#button6{
+    top: 460px;
+}
+#button7{
+    top: 520px;
+}
+
+#button4:hover, #button5:hover, #button6:hover, #button7:hover, #buttonReiniciar:hover, #buttonMenuPrincipal:hover {
+    background-color: var(--primarioLuz3);
+    box-shadow: 0 0 10px 0 var(--primarioLuz1) inset, 0 0 10px 4px var(--primarioLuz1);
+}   
+
+#ronaldo, #messi{
+    color: black;
+    display: block;
+    position: absolute;
+    top: 150px;
+}
+
+#messi{
+    left: 250px;
+}
+#ronaldo{
+    left: 540px;
+}
+#elegirFicha{
+    color: black;
+    display: block;
+    position: absolute;
+    left: 370px;
+    top: 185px;
+}
+#colorMessi, #colorRonaldo{
+    position: absolute;
+    top: 280px;
+    width: 100px;
+    background-color: transparent;
+}
+#colorMessi{
+    left: 245px;
+}
+#colorRonaldo{
+    left: 536px;
+}
+#elegirColor{
+    color: black;
+    position: absolute;
+    left: 370px;
+    top: 280px;
+    text-shadow: 1px 1px 10px rgb(255, 255, 255) ;
+
+}
+
+
+#inputNombreJugador1, #inputNombreJugador2{
+    position: absolute;
+    padding: 1px;
+    top: 100px;
+    width: 150px;
+}
+#inputNombreJugador1{
+    left: 220px;
+}
+#inputNombreJugador2{
+    left: 510px;
+}
+
+
+#ganador1, #ganador2{
+    display: block;
+    position: absolute;
+    font-size: 55px;
+    top: 155px;
+}
+#ganador1{
+    color: black;
+    left: 170px;
+    text-shadow: rgb(0, 17, 255) 5px 2px 15px;
+}
+#ganador2{
+    color: black;
+    left: 170px;
+    text-shadow: rgb(255, 0, 0) 5px 0 15px;
+}
+#reiniciar, #menu{
+    display: block;
+    position:absolute;
+    padding: 0px;
+    width: 150px;
+    height: 50px;
+    border-radius: 17px;
+    margin-bottom: 20px;
+    border-color: var(--acento);
+    box-shadow: 0 0 40px 40px var(--acento) inset, 0 0 0 0 var(--acento);
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    top: 350px;
+}
+
+
+#reiniciar{
+    left: 464px;
+}
+#menu{
+    left: 280px;
+}
+#reiniciar:hover, #menu:hover{
+    background-color: var(--acentoLuz2);
+    box-shadow: 0 0 10px 0 var(--acento) inset, 0 0 10px 4px var(--acento);
+}
+
+#terminoTiempoReglamentario{
+    display: block;
+    position: absolute;
+    top: 255px;
+    left: 145px;
+    font-size: 55px;
+    text-shadow: 5px 5px 5px black ;
+    text-shadow: rgb(255, 0, 0) 5px 0 15px;
+}
+#turnoJugador1, #turnoJugador2{
+    display: block;
+    width: 100px;
+    position: absolute;
+    top: 100px;
+    font-size: 18px;
+    text-shadow: 5px 5px 5px black ;
+    text-shadow: rgb(146, 17, 17) 5px 0 15px;
+}
+#turnoJugador1{
+    left: 60px;
+}
+#turnoJugador2{
+    left: 750px;
+}
+
+
+#timer{
+
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.756);
+    top: 540px;
+    left: 412px;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.divFinClass{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 890px;
+    height: 590px;
+    background-color: rgba(255, 255, 255, 0.226);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
