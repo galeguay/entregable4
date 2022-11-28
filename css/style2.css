@@ -564,9 +564,7 @@ footer a, footer h3{
     margin-left: 10px;
 }
 .nebulosaFondo{
-    background-image: url("../images/DragonBall/Nebulosa.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-image: url("../images/DragonBall/nebulosa.jpg"); */
     background-size: auto 900px;
     display: flex;
     flex-direction: column;
@@ -575,6 +573,52 @@ footer a, footer h3{
     font-weight: 900;
     text-shadow: black 2px 0 10px;
 }
+
+.bgNebulosa{
+    background-image: url("../images/DragonBall/nebulosa.jpg");
+    /* background-size: auto; */
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    height: 560px;
+    overflow: hidden;
+    overflow-y: auto;
+    perspective: 3px;
+  }
+
+/* PARALLAX */
+.parallax-bg{
+    /* background-size: cover; */
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    background-position: center center;
+    transform: translateZ(-0.5px) scale(2);
+    background-size: cover;
+    z-index: -1;
+    height: 100%;
+  }
+
+  .parallax-content{
+    background-size: cover;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    z-index: -1;
+    transform: translateY(-60vh) translateZ(0px) scale(1);
+    padding-left:30px;
+    padding-right:30px;
+    text-align:center;
+  }
+
 .btnReservar{
     background-color: var(--acento);
     border-radius: 17px;
