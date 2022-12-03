@@ -128,41 +128,6 @@ header{
 }
 
 
-
-/*
-.mainmenubtn {
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.menuHamburguesa-child {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 70px; left: 0px;
-    align-items: center;
-    background-color: var(--primarioSombra1);
-    min-width: 200px;
-    width: 300px;
-    height: 375px;
-}
-
-.menuHamburguesa-child a {
-    text-align: center;
-    width: 85%;
-    background-color: var(--primarioLuz2);
-    margin: 5px;
-    color: black;
-    padding: 15px;
-    text-decoration: none;
-    display: block;
-}
-.menuHamburguesa-child > a:hover{
-    filter: brightness(1.20);
-}*/
-
-
 /** MENU HAMBURGUESA NUEVO*/
 .hamburger {
     min-height: 30px;
@@ -224,7 +189,13 @@ header{
 }
 
 
-
+.logoSticky{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 75px;
+}
 
 
 
