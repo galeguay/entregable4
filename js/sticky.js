@@ -11,12 +11,12 @@ function myFunction() {
   if (window.pageYOffset > sticky) {
     header2.classList.add("sticky");
     header2.classList.add("headerChico");
-    logo.classList.add("logo2");
+    //logo.classList.add("logo2");
     logo.classList.add("logoSticky");
     console.log("Sticky add");
   } else {
     header2.classList.remove("sticky");
-    logo.classList.remove("logo2");
+    //logo.classList.remove("logo2");
     header2.classList.remove("headerChico");
     logo.classList.remove("logoSticky");
     console.log("Sticky remove");

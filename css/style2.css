@@ -165,11 +165,21 @@ header{
     width: 0px;
 }
 
+
+.enderezar{
+    transform: translate3d(0,1px,0) rotate(315deg);
+}
+/* .posicionDiv{
+    top: 150px;
+    left: -40px;
+} */
+
 #contenido{
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 50px; left: 0px;
+    top: -109px;
+    left: 117px;
     align-items: center;
     background-color: var(--primarioSombra1);
     min-width: 200px;
@@ -190,14 +200,48 @@ header{
 
 
 .logoSticky{
-    width: 200px;
-    height: 50px;
     position: absolute;
     top: 0px;
     left: 75px;
+    width: 200px;
+    height: 50px;
 }
 
 
+
+.contenido1{
+    position: absolute;
+    top: 0px;
+    left: -300px;
+}
+.translateContenido{
+    transform: translateX(302px);
+}
+.contenido2{
+    position: absolute;
+    top: 62px;
+    left: -300px;
+}
+.contenido3{
+    position: absolute;
+    top: 124px;
+    left: -300px;
+}
+.contenido4{
+    position: absolute;
+    top: 186px;
+    left: -300px;
+}
+.contenido5{
+    position: absolute;
+    top: 248px;
+    left: -300px;
+}
+.contenido6{
+    position: absolute;
+    top: 310px;
+    left: -300px;
+}
 
 
 
