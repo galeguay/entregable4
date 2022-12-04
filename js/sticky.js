@@ -2,6 +2,7 @@
 
 let header2 = document.getElementById("header2");
 let logo = document.querySelector(".logo");
+//let fotoPerfil = document.querySelector(".imagenPerfil");
 window.onscroll = function() {myFunction()};
 
 
@@ -13,7 +14,7 @@ function myFunction() {
     header2.classList.add("headerChico");
     //logo.classList.add("logo2");
     logo.classList.add("logoSticky");
-    console.log("Sticky add");
+    //fotoPerfil.classList.add("logoPerfilSticky");
   } else {
     header2.classList.remove("sticky");
     //logo.classList.remove("logo2");

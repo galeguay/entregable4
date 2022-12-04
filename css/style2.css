@@ -207,8 +207,6 @@ header{
     height: 50px;
 }
 
-
-
 .contenido1{
     position: absolute;
     top: 0px;
@@ -352,6 +350,7 @@ header > img {
     border-radius: 20px 0px 0px 20px;
 }
 
+
 .contenidoLanzamiento{
     background-color: var(--primarioSombra2);
     display: flex;
@@ -361,9 +360,45 @@ header > img {
     row-gap: 30px;
     border-radius: 0px 20px 20px 0px;
 }
+
 .contenidoLanzamiento h3{
     padding-left: 50px;
     padding-right: 50px;
+}
+
+/** HISTORIA NUEVA*/
+.historiaNueva{
+    margin: 0px 17px 17px 17px;
+}
+.historiaNueva h1{
+    padding: 7px 0px 7px 0px;
+}
+
+.historiaNueva div{
+    display: flex;
+}
+.historiaNueva img{
+    border-radius: 20px 0px 0px 20px;
+}
+
+
+.historiaContenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.historiaContenido h3{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.textShadowAzul{
+    text-shadow: 5px 5px 5px black ;
+    text-shadow: rgb(0, 0, 255) 5px 0 15px;
+    margin-left: 10px;
 }
 
 .button{
@@ -748,7 +783,58 @@ transform: rotateY(calc(40deg * 9)) translateZ(600px);
     row-gap: 15px;
 }
 
+/**FUTURE EN MOVIMIENTO*/
+.imageFeature{
+    position: relative;
+    transform: translateX(-700px);
+}
+.imageFeature.active{
+    transform: translatex(0px);
+    transition: 1s all ease;
+}
 
+.imageFeature2{
+    position: relative;
+    transform: translateX(-700px);
+}
+.imageFeature2.active{
+    transform: translatex(0px);
+    transition: 1s all ease;
+}
+
+.textFeature{
+    position: relative;
+    transform: translateX(-700px);
+}
+.textFeature.active{
+    transform: translatex(0px);
+    transition: 1s all ease;
+}
+
+.imageFeature3{
+    position: relative;
+    transform: translateX(+700px);
+}
+.imageFeature3.active{
+    transform: translatex(0px);
+    transition: 1s all ease;
+}
+.textFeature2{
+    position: relative;
+    transform: translateX(+700px);
+}
+.textFeature2.active{
+    transform: translatex(0px);
+    transition: 1s all ease;
+}
+.textFeature3{
+    position: relative;
+    transform: translateX(+700px);
+}
+.textFeature3.active{
+    transform: translatex(0px);
+    transition: 1s all ease;
+}
 
 .features{
     margin: 20px 10px 20px 10px;
@@ -768,6 +854,7 @@ transform: rotateY(calc(40deg * 9)) translateZ(600px);
 .feature h1, .feature2 h1{
     text-shadow: rgb(0, 0, 255) 4px 1px 5px;
 }
+
 .feature:hover, .feature2:hover{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
@@ -782,6 +869,42 @@ transform: rotateY(calc(40deg * 9)) translateZ(600px);
     border-style: inset;
 }*/
 
+.gokuTransform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/**PUNTO 9 */
+
+.tituloPersonajes{
+    position: relative;
+    transform: translateY(-100px)
+}
+.tituloPersonajes.activeTituloPersonajes{
+    transform: translateY(0px);
+    transition: 2s all ease;
+}
+
+.tituloGoku{
+    position: relative;
+    transform: translateY(100px)
+}
+.tituloGoku.activeTituloGoku{
+    transform: translateY(0px);
+    transition: 2s all ease;
+}
+
+.tituloVegeta{
+    position: relative;
+    transform: translateY(100px)
+}
+.tituloVegeta.activeTituloVegeta{
+    transform: translateY(0px);
+    transition: 2s all ease;
+}
+
 .divContenido{
     display: flex;
     flex-direction: column;
@@ -795,7 +918,7 @@ transform: rotateY(calc(40deg * 9)) translateZ(600px);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 1366px;
-    height: 2500px;
+    height: 3200px;
 }
 .descripcion, .historia{
     max-width: 1280px;
@@ -859,6 +982,31 @@ li.gameCard:hover{
 .payGameCard .price{
     color:#4C4C4C;
 }
+
+
+/**SPRITE SHEETE*/
+.spriteSheet{
+    margin: 30px;
+    width: 298px;
+    height: 574px;
+    background: url(../images/DragonBall/spriteSheetFinal.png);
+}
+.spriteSheet:hover{
+    animation: gokuTransform 2s steps(3) 1;
+    -webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+}
+
+@keyframes gokuTransform{
+    0% {
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -894px 0;
+    }
+}
+
  /* -----CARRUSEL PERSONAJES -------*/
 
 .personaje{
