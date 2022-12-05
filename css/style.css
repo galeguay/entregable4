@@ -488,19 +488,6 @@ footer a, footer h3{
 
 /*--------------------------------------------PAGINA DB------------*/
 
-@keyframes disolveEffect{
-    from {
-        opacity: 100%;
-    }
-    to {
-        opacity: 0%;
-    }
-}
-
-.disolveEffect{
-    animation: disolveEffect 1s infinite linear;
-}
-
 .textShadow{
     text-shadow: 2px 5px 10px black ;
 }
