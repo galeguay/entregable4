@@ -132,3 +132,18 @@ function animacionTituloVegeta() {
 }
 
 window.addEventListener("scroll", animacionTituloVegeta);
+
+function animacionCarrousel() {
+  let reveals = document.querySelector(".personajes");
+  //let bloque = document.querySelector(".tituloPersonajes");
+  let windowHeight = window.innerHeight;
+  let elementTop = reveals.getBoundingClientRect().top;
+  let elementVisible = 150;
+  if (elementTop < windowHeight - elementVisible) {
+      reveals.classList.add("activeCarrousel");
+  } else {
+    reveals.classList.remove("activeCarrousel");
+  }
+}
+
+window.addEventListener("scroll", animacionCarrousel);

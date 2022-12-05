@@ -929,9 +929,18 @@ transform: rotateY(calc(40deg * 9)) translateZ(600px);
 
 /*--------------------------------------*PUNTO 9 */
 
+.personajesCarrousel{
+    position: relative;
+    transform: translateY(+150px)
+}
+.personajesCarrousel.activeCarrousel{
+    transform: translateY(0px);
+    transition: 2s all ease;
+}
+
 .tituloPersonajes{
     position: relative;
-    transform: translateY(-100px)
+    transform: translateY(-150px)
 }
 .tituloPersonajes.activeTituloPersonajes{
     transform: translateY(0px);
