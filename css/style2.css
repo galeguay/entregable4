@@ -218,7 +218,9 @@ header{
 }
 .translateContenido{
     transform: translateX(302px);
+    transition-duration: 1s;
 }
+
 .contenido2{
     position: absolute;
     top: 62px;
@@ -384,7 +386,9 @@ header > img {
 .historiaNueva img{
     border-radius: 20px 0px 0px 20px;
 }
-
+#historia{
+    margin-bottom: 40px;
+}
 
 .historiaContenido{
     display: flex;
@@ -402,6 +406,11 @@ header > img {
 .textShadowAzul{
     text-shadow: 5px 5px 5px black ;
     text-shadow: rgb(0, 0, 255) 5px 0 15px;
+    margin-left: 10px;
+}
+.textShadowRed{
+    text-shadow: 5px 5px 5px black ;
+    text-shadow: rgb(255, 0, 0) 5px 0 15px;
     margin-left: 10px;
 }
 
@@ -643,6 +652,7 @@ footer a, footer h3{
     z-index: 900;
     padding-top: 20px;
     position: relative;
+    margin-bottom: 30px;
 }
 .btnReservar{
     background-color: var(--acento);
@@ -743,6 +753,8 @@ footer a, footer h3{
 }
 
 .gallery-rotate {
+    /* margin-top: 50px; */
+    /* margin-left: 50px; */
     padding: 20px 0 20px 0;
     left: 0;
     right: 0;
@@ -926,9 +938,18 @@ transform: rotateY(calc(40deg * 9)) translateZ(600px);
 
 /*--------------------------------------*PUNTO 9 */
 
+.personajesCarrousel{
+    position: relative;
+    transform: translateY(+150px)
+}
+.personajesCarrousel.activeCarrousel{
+    transform: translateY(0px);
+    transition: 2s all ease;
+}
+
 .tituloPersonajes{
     position: relative;
-    transform: translateY(-100px)
+    transform: translateY(-150px)
 }
 .tituloPersonajes.activeTituloPersonajes{
     transform: translateY(0px);
@@ -951,6 +972,9 @@ transform: rotateY(calc(40deg * 9)) translateZ(600px);
 .tituloVegeta.activeTituloVegeta{
     transform: translateY(0px);
     transition: 2s all ease;
+}
+.logoPerfilSticky{
+    width: 40px;
 }
 
 .bloque{
@@ -976,7 +1000,7 @@ transform: rotateY(calc(40deg * 9)) translateZ(600px);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 1366px;
-    height: 3200px;
+    height: 4200px;
 }
 .descripcion, .historia{
     max-width: 1280px;
@@ -1348,6 +1372,278 @@ li.gameCard:hover{
   }
 }
 
+
+/*seccion historia*/
+
+.history-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    top: -90px;
+    position: relative;
+}
+
+.history-section p {
+    font-size: 1.4rem;
+    margin-right: 10rem;
+}
+
+.history-section .left-section {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 5%;
+    z-index: 3;
+}
+
+.history-card-content {
+    width: 100%;
+    height: 400px;
+    top: 160px;
+    position: sticky;
+    display: none;
+}
+
+.showContent {
+    display: block;
+}
+
+
+.history-section .left-section .history-card-content .history-card-image {
+    width: 500px;
+    height: 320px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-history {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.history-section .right-section {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    width: 50%;
+    overflow: hidden;
+}
+
+.history-section .right-section .history-text-content {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 10%;
+    height: 400px;
+
+}
+
+/*Clase que asigna la animacion de desaparicion*/
+.fade-in {
+    animation: ease 0.9s fadeOut-history forwards;
+    -webkit-animation: ease 0.9s fadeOut-history forwards;
+}
+/*Clase que asigna la animacion de aparicion*/
+.fade-in.appear {
+    animation: ease 0.9s fadeIn-history forwards;
+    -webkit-animation: ease 0.9s fadeIn-history forwards;
+}
+
+.showCard {
+    display: block;
+}
+/*Animacion aparicion seccion historia*/
+@keyframes fadeIn-history {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/*Animacion desaparicion seccion historia*/
+@keyframes fadeOut-history {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/*Transicion de historia*/
+.slide-up {
+    transform: translateY(150px);
+    transition: transform 0.5s ease-in;
+    animation: ease 0.9s fadeOut-history forwards;
+    -webkit-animation: ease 0.9s fadeOut-history forwards;
+    -webkit-transition: transform 0.5s ease-in;
+    -moz-transition: transform 0.5s ease-in;
+    -ms-transition: transform 0.5s ease-in;
+    -o-transition: transform 0.5s ease-in;
+}
+
+.slide-up.appear {
+    transform: translateY(0);
+    transition: transform 0.5s ease-in;
+    animation: ease 0.9s fadeIn-history forwards;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+
+/* SECCION GAMEPLAY*/
+
+.carrousel {
+    width: 50vw;
+    height: 50vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carrousel>ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+    -webkit-transition: 200ms opacity ease-in-out;
+    -moz-transition: 200ms opacity ease-in-out;
+    -ms-transition: 200ms opacity ease-in-out;
+    -o-transition: 200ms opacity ease-in-out;
+}
+
+
+.slide>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}
+
+/*muestra solo la imagen que con data-active (puesto desde js)*/
+
+.slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    animation: fadeInSmaller 1.8s;
+    transition-delay: 20ms;
+    -webkit-animation: fadeInSmaller 1.8s;
+}
+
+/*animacion de scale mas grande y opacidad 0, a scale original con opacidad 1, esto de forma gradual*/
+@keyframes fadeInSmaller {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}
+
+
+.carrousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.carrousel-button:hover,
+.carrousel-button:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.carrousel-button:focus {
+    outline: 1px solid black;
+}
+
+.carrousel-button.prev {
+    left: 1rem;
+}
+
+.carrousel-button.next {
+    right: 1rem;
+}
+
+
+
+/**/
+
+
+.rise {
+    opacity: 0;
+    animation: rise 1s ease-in-out forwards;
+    -webkit-animation: rise 1s ease-in-out forwards;
+}
+
+
+@keyframes rise {
+    0% {
+        transform: translateY(2rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 
 
