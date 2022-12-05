@@ -90,7 +90,7 @@ header, .breadcrum, .section-box{
 
 
 
-/*HEADER*/
+/*------------------------------------HEADER*/
 
 header{
     width: 100%;
@@ -98,6 +98,7 @@ header{
     justify-content: space-between;
     align-items: center;
     background-color: var(--primarioSombra2);
+    z-index: 999;
 }
 
 /*.menuHamburguesa{
@@ -162,7 +163,7 @@ header{
 	transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 
-/*----PERFIL----*/
+/*----------------------------------------PERFIL----*/
 .imagenPerfil{
     cursor: pointer;
 }
@@ -252,7 +253,7 @@ header > img {
     margin-left: 17px;
 }
 
-/*SECTION LANZAMIENTO*/
+/*------------------------------------SECTION LANZAMIENTO*/
 .lanzamiento{
     margin: 0px 17px 17px 17px;
 }
@@ -321,7 +322,7 @@ button h2{
     color: black;
 }
 
-/*RECOMENDADOS*/
+/*------------------------------------RECOMENDADOS*/
 .category h1{
     padding-left: 38px;
     background: linear-gradient(90deg, rgba(3,50,80,1) 35%, rgba(0,24,40,1) 50%);
@@ -333,7 +334,7 @@ button h2{
     color: black;
     background: linear-gradient(90deg, var(--primarioLuz2) 35%, rgb(0,24,40,1) 50%);
 }
-/*CARRUSELES*/
+/*------------------------------------CARRUSELES*/
 .carrusel{
     display: flex;
 }
@@ -427,7 +428,7 @@ a.iconButton:hover{
     margin-bottom: 10px;
 }
 
-/*FOOTER*/
+/*------------------------------------FOOTER*/
 footer{
     color: black;
     background-color: var(--primarioLuz1);
@@ -485,7 +486,7 @@ footer a, footer h3{
     color: black;
 }
 
-/*--------PAGINA DB------------*/
+/*--------------------------------------------PAGINA DB------------*/
 
 .textShadow{
     text-shadow: 2px 5px 10px black ;
@@ -496,7 +497,6 @@ footer a, footer h3{
     margin-left: 10px;
 }
 .nebulosaFondo{
-    background-image: url("../images/DragonBall/Nebulosa.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: auto 900px;
@@ -506,6 +506,8 @@ footer a, footer h3{
     align-items: center;
     font-weight: 900;
     text-shadow: black 2px 0 10px;
+    z-index: 999;
+    position: relative;
 }
 .btnReservar{
     background-color: var(--acento);
@@ -532,6 +534,34 @@ footer a, footer h3{
     box-shadow: 0 0 10px 0 var(--acentoLuz1) inset, 0 0 10px 4px var(--acentoLuz1);
 }
 
+
+@keyframes scroll{
+    0% {background-position-x: 0px;}
+    100% {background-position-x: -2560px;}
+}
+
+.layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    background-repeat: repeat-x;
+    background-size: cover;
+}
+
+.layer1{
+    background-image: url(../images/DragonBall/Nebulosa.png);
+    animation: scroll 30s infinite linear;
+}
+.layer2{
+    background-image: url(../images/DragonBall/clouds.png);
+    animation: scroll 10s infinite linear;
+}
+.layer3{
+    background-image: url(../images/DragonBall/mountains.png);
+    animation: scroll 20s infinite linear;
+}
 
 .logoJuego{
     margin-top: 20px;
@@ -692,7 +722,7 @@ transform: rotateY(calc(40deg * 9)) translateZ(600px);
     -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
     box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
 }
-/*.feature{
+/*------------------------------------.feature{
     border-style: outset;
 }
 .feature2{
@@ -723,7 +753,7 @@ transform: rotateY(calc(40deg * 9)) translateZ(600px);
     margin-bottom: 70px;
 }
 
-/* ---------GAMECARD--------- */
+/*------------------------------------ ---------GAMECARD--------- */
 .gameCard, .payGameCard{
     display: flex;
     flex-direction: column;
@@ -774,7 +804,7 @@ li.gameCard:hover{
 .payGameCard .price{
     color:#4C4C4C;
 }
- /* -----CARRUSEL PERSONAJES -------*/
+ /*------------------------------------ -----CARRUSEL PERSONAJES -------*/
 
 .personaje{
     -webkit-transition: all 0.7s ease;
@@ -846,7 +876,7 @@ li.gameCard:hover{
     color: black;
 }
 
-/* ---------CARRUSEL--------- */
+/*------------------------------------ ---------CARRUSEL--------- */
 
 .slider-wrapper {
     position: relative;
