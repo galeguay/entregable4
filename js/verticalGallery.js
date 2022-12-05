@@ -24,8 +24,6 @@ let characters = document.querySelectorAll("article.characters ul");
 
 window.addEventListener("scroll", scrollAppear);
 
-/*Segun se vayan viendo los elementos (esto se confirma atravez del scroll) se les agrega la clase appear para
-que pasen de opacidad 0 a 1 gradualmente*/
 function scrollAppear() {
   faders.forEach((fader) => {
     let top = fader.getBoundingClientRect().top;
@@ -52,9 +50,6 @@ function scrollAppear() {
   let topPosition1 = historytext2.getBoundingClientRect().top;
   let topPosition2 = historytext3.getBoundingClientRect().top;
   let topTrailer = trailer.getBoundingClientRect().top;
-
-  /*Segun se vayan viendo los elementos se le agrega la clase para que se vean, y cuando los elementos van quedando
-  atras se les agrega la clase fade-in para que vayan desapeciendo con su opacidad de 1 a 0 gradualmente*/
 
   if (topPosition < position) {
     historyCard1.classList.add("showContent");

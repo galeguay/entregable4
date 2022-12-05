@@ -16,9 +16,6 @@ buttons.forEach((button) => {
   });
 });
 
-/*cuando se scrollea salta esta function que va comprobando si la ventana llego a la posicion de cada carusel,
-de ser asi, se agrega la classList "rise" que hace la animacion de pasar de opacidad 0 a 1 y de venir de abajo
-hacia arriba*/
 
 function castRiseCarrousels() {
   let triggerBottom = (window.innerHeight / 5) * 4;
