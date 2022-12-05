@@ -400,6 +400,11 @@ header > img {
     text-shadow: rgb(0, 0, 255) 5px 0 15px;
     margin-left: 10px;
 }
+.textShadowRed{
+    text-shadow: 5px 5px 5px black ;
+    text-shadow: rgb(255, 0, 0) 5px 0 15px;
+    margin-left: 10px;
+}
 
 .button{
     height: fit-content;
@@ -638,6 +643,7 @@ footer a, footer h3{
     text-shadow: black 2px 0 10px;
     z-index: 999;
     position: relative;
+    margin-bottom: 50px;
 }
 .btnReservar{
     background-color: var(--acento);
@@ -738,6 +744,8 @@ footer a, footer h3{
 }
 
 .gallery-rotate {
+    /* margin-top: 50px; */
+    /* margin-left: 50px; */
     padding: 20px 0 20px 0;
     left: 0;
     right: 0;
@@ -964,7 +972,7 @@ transform: rotateY(calc(40deg * 9)) translateZ(600px);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 1366px;
-    height: 4000px;
+    height: 4500px;
 }
 .descripcion, .historia{
     max-width: 1280px;
@@ -1435,6 +1443,151 @@ li.gameCard:hover{
     -o-transform: translateY(0);
 }
 
+
+/* SECCION GAMEPLAY*/
+
+.carrousel {
+    width: 50vw;
+    height: 50vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carrousel>ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+    -webkit-transition: 200ms opacity ease-in-out;
+    -moz-transition: 200ms opacity ease-in-out;
+    -ms-transition: 200ms opacity ease-in-out;
+    -o-transition: 200ms opacity ease-in-out;
+}
+
+
+.slide>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}
+
+/*muestra solo la imagen que con data-active (puesto desde js)*/
+
+.slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    animation: fadeInSmaller 1.8s;
+    transition-delay: 20ms;
+    -webkit-animation: fadeInSmaller 1.8s;
+}
+
+/*animacion de scale mas grande y opacidad 0, a scale original con opacidad 1, esto de forma gradual*/
+@keyframes fadeInSmaller {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}
+
+
+.carrousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.carrousel-button:hover,
+.carrousel-button:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.carrousel-button:focus {
+    outline: 1px solid black;
+}
+
+.carrousel-button.prev {
+    left: 1rem;
+}
+
+.carrousel-button.next {
+    right: 1rem;
+}
+
+
+
+/**/
+
+
+.rise {
+    opacity: 0;
+    animation: rise 1s ease-in-out forwards;
+    -webkit-animation: rise 1s ease-in-out forwards;
+}
+
+
+@keyframes rise {
+    0% {
+        transform: translateY(2rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 
 
