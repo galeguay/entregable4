@@ -135,7 +135,6 @@ window.addEventListener("scroll", animacionTituloVegeta);
 
 function animacionCarrousel() {
   let reveals = document.querySelector(".personajes");
-  //let bloque = document.querySelector(".tituloPersonajes");
   let windowHeight = window.innerHeight;
   let elementTop = reveals.getBoundingClientRect().top;
   let elementVisible = 150;

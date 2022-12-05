@@ -1563,6 +1563,27 @@ li.gameCard:hover{
     animation: 0.5s ease-in giroSimple forwards;
     transition-delay: 20ms;
 
+<<<<<<< HEAD
+=======
+@keyframes fadeInSmaller {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+>>>>>>> 4b8a02031bee532658c9837403a9c078acad97a5
 }
 
 @keyframes giroSimple {
