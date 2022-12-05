@@ -1256,12 +1256,12 @@ li.gameCard:hover{
     border-radius: 10px;
 }
 .gameMedia img:hover{
-    animation: 0.5s ease-in example forwards;
+    animation: 0.5s ease-in giro forwards;
     position: relative;
     z-index: 1;
 }
 
-@keyframes example {
+@keyframes giro {
     to {filter: blur(0px) grayscale(0%);
         transform: scale(1.4) rotateX(360deg);
         border-radius: 0px;
@@ -1477,7 +1477,7 @@ li.gameCard:hover{
 }
 
 
-/*Transicion de historia*/
+/*-------------------------------------------------- Carrusel vertical*/
 .slide-up {
     transform: translateY(150px);
     transition: transform 0.5s ease-in;
@@ -1556,37 +1556,21 @@ li.gameCard:hover{
     }
 }
 
-/*muestra solo la imagen que con data-active (puesto desde js)*/
 
 .slide[data-active] {
     opacity: 1;
     z-index: 1;
-    animation: fadeInSmaller 1.8s;
+    animation: 0.5s ease-in giroSimple forwards;
     transition-delay: 20ms;
-    -webkit-animation: fadeInSmaller 1.8s;
+
 }
 
-/*animacion de scale mas grande y opacidad 0, a scale original con opacidad 1, esto de forma gradual*/
-@keyframes fadeInSmaller {
-    0% {
-        opacity: 0;
-        transform: scale(1.2);
-        -webkit-transform: scale(1.2);
-        -moz-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        -o-transform: scale(1.2);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-        -webkit-transform: scale(1);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
-    }
+@keyframes giroSimple {
+    to {filter: blur(0px) grayscale(0%);
+        transform: rotateX(360deg);
+        border-radius: 0px;
+        box-shadow: 0px 0px 50px 20px black}
 }
-
 
 .carrousel-button {
     position: absolute;
@@ -1600,17 +1584,12 @@ li.gameCard:hover{
     cursor: pointer;
     border-radius: .25rem;
     padding: 0 .5rem;
-    background-color: rgba(0, 0, 0, .1);
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
-.carrousel-button:hover,
-.carrousel-button:focus {
-    color: white;
-    background-color: rgba(0, 0, 0, .2);
-}
-
-.carrousel-button:focus {
-    outline: 1px solid black;
+.carrousel-button:hover{
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .carrousel-button.prev {
