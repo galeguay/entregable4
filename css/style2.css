@@ -217,7 +217,9 @@ header{
 }
 .translateContenido{
     transform: translateX(302px);
+    transition-duration: 1s;
 }
+
 .contenido2{
     position: absolute;
     top: 62px;
