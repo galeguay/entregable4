@@ -90,6 +90,9 @@ a:hover{
 header, .breadcrum, .section-box{
     background-color: var(--primarioSombra2);
 }
+header{
+    z-index: 999;
+}
 
 
 
@@ -641,7 +644,7 @@ footer a, footer h3{
     align-items: center;
     font-weight: 900;
     text-shadow: black 2px 0 10px;
-    z-index: 999;
+    z-index: 900;
     position: relative;
     margin-bottom: 50px;
 }
