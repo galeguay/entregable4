@@ -93,7 +93,7 @@ header, .breadcrum, .section-box{
 
 
 
-/*HEADER*/
+/*--------------------------------------HEADER*/
 
 header{
     width: 100%;
@@ -128,7 +128,7 @@ header{
 }
 
 
-/** MENU HAMBURGUESA NUEVO*/
+/*--------------------------------------* MENU HAMBURGUESA NUEVO*/
 .hamburger {
     min-height: 30px;
     max-width: 50px;
@@ -152,7 +152,7 @@ header{
 }
 
 
-/* ANIMACION X*/
+/*-------------------------------------- ANIMACION X*/
 
 .open .hamburger-inner{
     transform: translate3d(0,10px,0) rotate(45deg);
@@ -198,8 +198,6 @@ header{
     display: block;
 }
 
-<<<<<<< HEAD
-=======
 
 .logoSticky{
     position: absolute;
@@ -245,8 +243,7 @@ header{
 
 
 
->>>>>>> devJoaco
-/*----PERFIL----*/
+/*------------------------------------------PERFIL----*/
 .imagenPerfil{
     cursor: pointer;
 }
@@ -336,7 +333,7 @@ header > img {
     margin-left: 17px;
 }
 
-/*SECTION LANZAMIENTO*/
+/*--------------------------------------SECTION LANZAMIENTO*/
 .lanzamiento{
     margin: 0px 17px 17px 17px;
 }
@@ -369,7 +366,7 @@ header > img {
     padding-right: 50px;
 }
 
-/** HISTORIA NUEVA*/
+/*--------------------------------------* HISTORIA NUEVA*/
 .historiaNueva{
     margin: 0px 17px 17px 17px;
 }
@@ -442,7 +439,7 @@ button h2{
     color: black;
 }
 
-/*RECOMENDADOS*/
+/*--------------------------------------RECOMENDADOS*/
 .category h1{
     padding-left: 38px;
     background: linear-gradient(90deg, rgba(3,50,80,1) 35%, rgba(0,24,40,1) 50%);
@@ -454,7 +451,7 @@ button h2{
     color: black;
     background: linear-gradient(90deg, var(--primarioLuz2) 35%, rgb(0,24,40,1) 50%);
 }
-/*CARRUSELES*/
+/*--------------------------------------CARRUSELES*/
 .carrusel{
     display: flex;
 }
@@ -548,7 +545,7 @@ a.iconButton:hover{
     margin-bottom: 10px;
 }
 
-/*FOOTER*/
+/*--------------------------------------FOOTER*/
 footer{
     color: black;
     background-color: var(--primarioLuz1);
@@ -606,7 +603,7 @@ footer a, footer h3{
     color: black;
 }
 
-/*--------PAGINA DB------------*/
+/*----------------------------------------------PAGINA DB------------*/
 
 @keyframes disolveEffect{
     from {
@@ -829,7 +826,7 @@ transform: rotateY(calc(40deg * 9)) translateZ(600px);
     row-gap: 15px;
 }
 
-/**FUTURE EN MOVIMIENTO*/
+/*--------------------------------------*FUTURE EN MOVIMIENTO*/
 .imageFeature{
     position: relative;
     transform: translateX(-700px);
@@ -922,7 +919,7 @@ transform: rotateY(calc(40deg * 9)) translateZ(600px);
     align-items: center;
 }
 
-/**PUNTO 9 */
+/*--------------------------------------*PUNTO 9 */
 
 .tituloPersonajes{
     position: relative;
@@ -975,10 +972,8 @@ transform: rotateY(calc(40deg * 9)) translateZ(600px);
     margin-bottom: 70px;
 }
 
-/* ---------GAMECARD--------- */
+/*-------------------------------------- ---------GAMECARD--------- */
 .gameCard, .payGameCard{
-    /*position: relative;
-    z-index: -1px;*/
     display: flex;
     flex-direction: column;
     min-width: 280px;
@@ -1030,7 +1025,7 @@ li.gameCard:hover{
 }
 
 
-/**SPRITE SHEETE*/
+/*--------------------------------------*SPRITE SHEETE*/
 .spriteSheet{
     margin: 30px;
     width: 298px;
@@ -1053,18 +1048,13 @@ li.gameCard:hover{
     }
 }
 
- /* -----CARRUSEL PERSONAJES -------*/
+ /*--------------------------------------CARRUSEL PERSONAJES -------*/
 
 .personaje{
     -webkit-transition: all 0.7s ease;
     transition: all 0.7s ease;
 }
-/* .personaje img:hover{
-    -webkit-transform: rotateY(180deg);
-    -webkit-transform-style: preserve-3d;
-    transform: rotateY(180deg);
-    transform-style: preserve-3d;
-} */
+
 .personaje:hover{
     -webkit-transform:scale(1.3);
     transform: scale(1.2);
@@ -1125,7 +1115,7 @@ li.gameCard:hover{
     color: black;
 }
 
-/* ---------CARRUSEL--------- */
+/*-------------------------------------- ---------CARRUSEL--------- */
 
 .slider-wrapper {
     position: relative;
